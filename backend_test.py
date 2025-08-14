@@ -99,9 +99,9 @@ class URLShortenerTester:
         )
 
     def test_redirect(self, short_code):
-        """Test redirect functionality"""
+        """Test redirect functionality - NEW /api/r/{short_code} endpoint"""
         return self.run_test(
-            f"Redirect for code: {short_code}", "GET", f"/{short_code}", 302
+            f"Redirect for code: {short_code}", "GET", f"/api/r/{short_code}", 302
         )
 
     def test_invalid_scenarios(self):
