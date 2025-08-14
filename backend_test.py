@@ -126,8 +126,8 @@ class URLShortenerTester:
         self.run_test("Custom code with invalid chars", "POST", "shorten", 422,
                      {"url": "https://google.com", "custom_code": "test@123"})
         
-        # Non-existent short code redirect
-        self.run_test("Non-existent redirect", "GET", "/nonexistent123", 404)
+        # Non-existent short code redirect - NEW /api/r/ endpoint
+        self.run_test("Non-existent redirect", "GET", "/api/r/nonexistent123", 404)
         
         # Empty bulk URLs
         self.run_test("Empty bulk URLs", "POST", "shorten-bulk", 422, {"urls": []})
