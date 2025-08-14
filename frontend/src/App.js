@@ -203,7 +203,7 @@ function App() {
                       </label>
                       <div className="flex items-center space-x-2">
                         <span className="text-sm text-slate-500 whitespace-nowrap">
-                          {BACKEND_URL}/
+                          {BACKEND_URL}/api/r/
                         </span>
                         <Input
                           type="text"
