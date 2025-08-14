@@ -206,7 +206,7 @@ def main():
     if tester.created_short_codes:
         print(f"\n📝 Created Short Codes for Further Testing:")
         for code in tester.created_short_codes[:5]:  # Show first 5
-            print(f"   - {tester.base_url}/{code}")
+            print(f"   - {tester.base_url}/api/r/{code}")  # Updated to show new redirect pattern
     
     # Return exit code
     if tester.tests_passed == tester.tests_run:
