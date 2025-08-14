@@ -158,7 +158,7 @@ async def shorten_urls_bulk(request: BulkURLShortenRequest):
             url_mapping = URLShortenResponse(
                 original_url=url_request.url,
                 short_code=short_code,
-                short_url=f"{os.environ.get('BACKEND_URL', 'http://localhost:8001')}/{short_code}",
+                short_url=f"{os.environ.get('BACKEND_URL', 'http://localhost:8001')}/api/r/{short_code}",
                 custom=False
             )
             
