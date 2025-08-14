@@ -185,8 +185,8 @@ async def get_urls(limit: int = 50):
         logging.error(f"Error fetching URLs: {e}")
         raise HTTPException(status_code=500, detail="Internal server error")
 
-# Direct redirect route (not under /api prefix)
-@app.get("/{short_code}")
+# Redirect route under /api prefix to work with Kubernetes ingress
+@api_router.get("/r/{short_code}")
 async def redirect_to_url(short_code: str):
     """Redirect short code to original URL"""
     try:
